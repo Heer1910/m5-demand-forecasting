@@ -80,19 +80,6 @@ m5-demand-forecasting/
 
 ---
 
-## 🚀 Quick Start
-
-### Installation
-
-```bash
-# Clone repository
-git clone https://github.com/Heer1910/m5-demand-forecasting.git
-cd m5-demand-forecasting
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
 ### Download Dataset
 
 **📥 M5 Forecasting - Accuracy Dataset (Required)**
@@ -106,28 +93,9 @@ This project uses the official M5 Walmart sales dataset from Kaggle:
 2. `calendar.csv` (~100 KB) - Date features and events  
 3. `sell_prices.csv` (~194 MB) - Weekly pricing data
 
-**Download Instructions:**
-1. Create free Kaggle account (if needed)
-2. Accept competition rules
-3. Download the 3 CSV files
-4. Place them in `data/raw/` directory
-
 **Dataset Attribution:**
 - Source: [M5 Forecasting - Accuracy Competition](https://www.kaggle.com/competitions/m5-forecasting-accuracy)
 - Provided by: Walmart & University of Nicosia
-- License: Competition rules apply
-
-> **Note for Recruiters:** Raw data files are not included in this repository due to size constraints (400+ MB total). Download takes ~2 minutes from Kaggle. **OR** view pre-generated results in `plots/` folder - no download needed!
-
-### Run Pipeline
-
-```bash
-# Quick test (5 time series, ~2 minutes)
-python src/pipeline.py --data-dir data/raw --max-series 5
-
-# Full analysis (30 time series, ~10 minutes)
-python src/pipeline.py --data-dir data/raw --max-series 30
-```
 
 ### Output
 
@@ -262,18 +230,6 @@ Raw M5 Data → Clean → Aggregate → Engineer Features → Backtest → Evalu
 └── notebooks/
     └── exploratory_analysis.ipynb
 ```
-
----
-
-## 🔬 Reproducibility
-
-**All results are fully reproducible:**
-1. Use same data (M5 Kaggle dataset)
-2. Run with `--max-series 30` for consistency
-3. Results may vary slightly due to ARIMA random initialization
-
-**Configuration:** All hyperparameters in `src/config/config.yaml`
-
 ---
 
 ## 🌟 Why This Project Stands Out
@@ -303,17 +259,6 @@ Business impact + technical implementation + visualizations
 
 ---
 
-## 🤝 Contributing
-
-Contributions welcome! Potential enhancements:
-- [ ] Additional models (Prophet, LSTM)
-- [ ] Promotional impact modeling
-- [ ] Price elasticity features
-- [ ] Multi-horizon forecasting
-- [ ] Automated hyperparameter tuning
-
----
-
 ## 📄 License
 
 MIT License - see [LICENSE](./LICENSE) file
@@ -324,7 +269,7 @@ MIT License - see [LICENSE](./LICENSE) file
 
 **Heer Patel**  
 Data Scientist | ML Engineer  
-[GitHub](https://github.com/Heer1910) | [LinkedIn](#)
+[GitHub](https://github.com/Heer1910) | [LinkedIn](https://www.linkedin.com/in/heerpatel19/)
 
 ---
 
@@ -340,5 +285,3 @@ Data Scientist | ML Engineer
 > Template for translating ML results into actionable insights with ROI analysis, implementation roadmap, and stakeholder communication.
 
 ---
-
-**⭐ If this helped you, please star the repo!**
