@@ -1,0 +1,60 @@
+# M5 Demand Forecasting Configuration
+
+# Data paths
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  sales_file: "sales_train_validation.csv"
+  calendar_file: "calendar.csv"
+  prices_file: "sell_prices.csv"
+
+# Aggregation level
+aggregation:
+  level: "store_category"  # Options: sku, store_category, category
+  
+# Feature engineering
+features:
+  lag_days: [7, 14, 28]
+  rolling_windows: [7, 28]
+  calendar_features:
+    - day_of_week
+    - week_of_year
+    - month
+    - is_weekend
+    - event_flag
+
+# Forecast horizon
+forecast:
+  horizon: 28  # days ahead to forecast
+  
+# Backtesting
+backtest:
+  n_folds: 3
+  train_window: 180  # days (reduced from 365)
+  step_size: 14  # days (reduced from 28)
+
+# Model hyperparameters
+models:
+  moving_average:
+    window: 7
+    
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+    
+  arima:
+    max_p: 5
+    max_d: 2
+    max_q: 5
+    seasonal: true
+    m: 7  # weekly seasonality
+
+# Visualization
+visualization:
+  output_dir: "plots"
+  figsize: [12, 6]
+  dpi: 100
