@@ -4,9 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Forecast Accuracy](https://img.shields.io/badge/MAPE-13.51%25-success)](./plots/results_summary.csv)
 
-**Production-ready demand forecasting pipeline** achieving **13.51% MAPE** using real Walmart retail data. Built with clean OOP design, rigorous backtesting, and actionable business insights.
+A demand forecasting pipeline built with real Walmart retail data (M5 dataset). I compared 5 different forecasting approaches to see which performs best for inventory planning.
 
-> 🏆 **Key Achievement:** ARIMA model delivered best-in-class 13.51% MAPE on 30 store-category combinations, demonstrating superior statistical forecasting performance.
+**Results:** ARIMA model achieved 13.51% MAPE across 30 store-category combinations, which beats typical retail forecasting benchmarks (15-25% MAPE).
 
 ---
 
@@ -26,33 +26,29 @@
 
 ---
 
-## 💼 Business Impact
+## 💼 Why This Matters
 
-**This system enables:**
-- ✅ **$2.7M annual savings** for mid-size retailers
-- ✅ **15-20% inventory reduction** while maintaining service levels
-- ✅ **30-40% fewer stockouts** through optimized safety stock
-- ✅ **86.5% forecast accuracy** (industry-leading performance)
+Better demand forecasts directly impact the bottom line:
+- **Lower inventory costs** - don't over-order
+- **Fewer stockouts** - don't lose sales
+- **Better planning** - right staff at right time
 
-**📖 Read the full analysis:** [BUSINESS_IMPACT.md](./BUSINESS_IMPACT.md)
+With 13.51% MAPE, forecasts are about 86% accurate on average. Industry typical is 15-25% MAPE, so this is solid performance.
+
+> For more details on business applications, see [BUSINESS_IMPACT.md](./BUSINESS_IMPACT.md)
 
 ---
 
-## 🎯 Project Overview
+## 🎯 What I Built
 
-### Problem Statement
-Retailers lose millions annually due to:
-- Excess inventory tying up capital
-- Stockouts causing lost sales
-- Inefficient workforce planning
+### The Problem
+Retailers struggle with inventory - too much ties up cash, too little loses sales. I wanted to see if different forecasting models could help optimize this.
 
-### Solution
-Rigorous comparison of 5 forecasting models using **rolling backtest evaluation** on real transaction data to identify the most reliable approach for inventory planning.
+### The Approach
+Tested 5 models (Naive, Seasonal Naive, Moving Average, ARIMA, XGBoost) using rolling backtests on real Walmart data. No cheating with future data - simulated actual forecasting like you'd do in practice.
 
-### Key Insights
-1. **Weekly seasonality dominates** retail demand patterns
-2. **Simple models outperform complex** when patterns are predictable
-3. **Store-category aggregation** balances accuracy and scalability
+### Key Finding
+ARIMA performed best at 13.51% MAPE. Interestingly, the simpler Seasonal Naive was close behind at 13.89%, showing you don't always need complex ML.
 
 ---
 
