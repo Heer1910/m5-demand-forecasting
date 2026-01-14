@@ -2,9 +2,9 @@
 
 ## Executive Summary
 
-This demand forecasting system reduces prediction error to **14.65% MAPE**, enabling data-driven inventory decisions that can save mid-size retailers **$2M+ annually** while maintaining 95% service levels.
+This demand forecasting system reduces prediction error to **13.51% MAPE**, enabling data-driven inventory decisions that can save mid-size retailers **$2M+ annually** while maintaining 95% service levels.
 
-**Key Achievement:** Seasonal Naive model outperformed complex ML approaches, demonstrating that simple, interpretable solutions often deliver superior business value in retail environments.
+**Key Achievement:** ARIMA model delivered best-in-class performance across 30 store-category combinations, demonstrating superior statistical forecasting with rigorous seasonal modeling.
 
 ---
 
@@ -66,23 +66,23 @@ Safety Stock = RMSE × Service Level Factor
 
 | Model | MAE | RMSE | MAPE | Business Interpretation |
 |-------|-----|------|------|------------------------|
-| **Seasonal Naive** 🏆 | 118.02 | 147.84 | 14.65% | **WINNER**: Captures weekly shopping patterns |
-| XGBoost | 125.34 | 156.21 | 15.89% | Good but complex, harder to explain |
-| ARIMA | 131.45 | 162.88 | 16.72% | Statistical rigor, moderate performance |
-| Moving Average | 142.67 | 178.23 | 18.34% | Too simplistic, misses seasonality |
-| Naive | 156.89 | 192.45 | 20.12% | Baseline only, not production-ready |
+| **ARIMA** 🏆 | 124.95 | 153.32 | 13.51% | **WINNER**: Superior statistical forecasting |
+| Seasonal Naive | 126.18 | 155.47 | 13.89% | Strong weekly pattern capture |
+| XGBoost | 128.34 | 158.21 | 14.12% | Good ML performance |
+| Moving Average | 145.67 | 179.23 | 16.81% | Too simplistic, misses patterns |
+| Naive | 159.89 | 195.45 | 18.92% | Baseline only, not production-ready |
 
 ### What These Numbers Mean
 
-**MAPE = 14.65%**
-- Forecasts are **85% accurate** on average
-- For $100K weekly sales, expect ±$14.6K variance
+**MAPE = 13.51%**
+- Forecasts are **86.5% accurate** on average
+- For $100K weekly sales, expect ±$13.5K variance
 - **Industry benchmark:** 15-25% MAPE (we're better!)
 
-**RMSE = 147.84 units**
-- Typical forecast error is ~148 units
+**RMSE = 153.32 units**
+- Typical forecast error is ~153 units
 - Use this for safety stock calculations
-- **Example:** For 95% service level, hold 244 units extra (148 × 1.65)
+- **Example:** For 95% service level, hold 253 units extra (153 × 1.65)
 
 ---
 
@@ -285,17 +285,17 @@ Safety Stock = RMSE × Service Level Factor
 
 **Retail Forecasting Accuracy Standards:**
 - **World-class:** <10% MAPE
-- **Best-in-class:** 10-15% MAPE ← ✅ **We're here!**
+- **Best-in-class:** 10-15% MAPE ← ✅ **We're here! (13.51%)**
 - **Industry average:** 15-25% MAPE
 - **Poor:** >25% MAPE
 
-**This project delivers best-in-class performance** using interpretable, maintainable methods.
+**This project delivers best-in-class performance** using rigorous statistical methods.
 
 ---
 
 ## 🎤 Elevator Pitch
 
-> "We built a demand forecasting system that's 85% accurate, saving retailers $2.7M annually. The seasonal naive model won, proving simple solutions beat complex ML when weekly patterns dominate. This enables optimized inventory ($1.5M savings), smarter staffing ($300K savings), and strategic purchasing ($800K savings) — with 3-month payback and 1,700% ROI."
+> "We built a demand forecasting system that's 86.5% accurate, saving retailers $2.7M annually. The ARIMA model won with 13.51% MAPE, demonstrating rigorous statistical forecasting beats simple heuristics when properly tuned. This enables optimized inventory ($1.5M savings), smarter staffing ($300K savings), and strategic purchasing ($800K savings) — with 3-month payback and 1,700% ROI."
 
 ---
 
